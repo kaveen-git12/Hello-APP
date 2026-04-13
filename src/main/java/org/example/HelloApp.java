@@ -4,7 +4,6 @@ package org.example;
  * Hello world!
  *
  */
-
 public class HelloApp {
     public static void main(String[] args) {
         String greeting;
@@ -14,12 +13,10 @@ public class HelloApp {
         } else {
             StringBuilder sb = new StringBuilder();
             for (String name : args) {
-                if (sb.length() > 0) {
-                    sb.append(", ");
-                }
                 sb.append(name);
+                sb.append(", ");
             }
-            greeting = sb.toString();
+            greeting = sb.substring(0, sb.length() - 2);
         }
 
         System.out.println("Hello, " + greeting + "!");
