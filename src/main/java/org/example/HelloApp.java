@@ -5,15 +5,12 @@ package org.example;
  *
  */
 
-public class HelloApp
-{
-    public static void main( String[] args )
-    {
-
+public class HelloApp {
+    public static void main(String[] args) {
         String name = "World";
-        if (args.length > 0){
-            name = args[0];
+        if (args.length > 0) {
+            name = String.join(", ", args);
         }
-        System.out.println("Hello " + name + "!");
+        System.out.println("Hello, " + name + "!");
     }
 }
